@@ -1,12 +1,5 @@
 # Actividad 1 - Manejo de ficheros
 
-## Video pruebas:
-
-[https://www.youtube.com/watch?v=wej6ksmjBSA](https://www.youtube.com/watch?v=wej6ksmjBSA)
-
-## Repositorio:
-
-[GitHub - guiller91/Manejo_Ficheros: Ejercicio para el manejo de ficheros donde crearemos un almacén de coches.](https://github.com/guiller91/Manejo_Ficheros)
 
 ## Objetivos
 
