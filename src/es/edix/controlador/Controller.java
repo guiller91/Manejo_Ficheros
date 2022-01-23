@@ -60,7 +60,7 @@ public class Controller implements Serializable{
 			oos.writeObject(almacen);
 			System.out.println("Archivo codificado en Coches.dat");
 		} catch (IOException e) {
-
+			System.out.println("Error al exportar");
 			e.printStackTrace();
 		}
 
@@ -77,7 +77,7 @@ public class Controller implements Serializable{
 			bw.flush();
 			System.out.println("Archivo exportado a Almacen.txt");
 		} catch (IOException e) {
-
+			System.out.println("Error al exportar");
 			e.printStackTrace();
 		}
 	}
