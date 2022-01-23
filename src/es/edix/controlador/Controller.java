@@ -68,7 +68,8 @@ public class Controller implements Serializable{
 
 	public void exportarAlmacenTexto() {
 		// exportamos en formato texto
-		try (FileWriter fw = new FileWriter(new File("Almacen.txt")); BufferedWriter bw = new BufferedWriter(fw);) {
+		try (FileWriter fw = new FileWriter(new File("Almacen.txt")); 
+			 BufferedWriter bw = new BufferedWriter(fw);) {
 
 			for (int i = 0; i < almacen.size(); i++) {
 				bw.write(almacen.get(i).toString());
