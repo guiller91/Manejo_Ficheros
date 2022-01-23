@@ -51,34 +51,35 @@ public class Controller implements Serializable{
 		return null; 
 	}
 	
-	public void exportarAlmacen() {
-		
-		//exportamos en formato texto
-		try(FileWriter fw = new FileWriter(new File("Almacen.txt"));
-			BufferedWriter bw = new BufferedWriter(fw);) {
-			
-			for(int i=0 ; i<almacen.size() ; i++) {
+	public void exportarAlmacenData() {
+
+		// exportamos codificado
+		try (FileOutputStream fos = new FileOutputStream(new File("Coches.dat"));
+				ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+
+			oos.writeObject(almacen);
+			System.out.println("Archivo codificado en Coches.dat");
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+
+	}
+
+	public void exportarAlmacenTexto() {
+		// exportamos en formato texto
+		try (FileWriter fw = new FileWriter(new File("Almacen.txt")); BufferedWriter bw = new BufferedWriter(fw);) {
+
+			for (int i = 0; i < almacen.size(); i++) {
 				bw.write(almacen.get(i).toString());
 				bw.newLine();
 			}
 			bw.flush();
 			System.out.println("Archivo exportado a Almacen.txt");
 		} catch (IOException e) {
-			
+
 			e.printStackTrace();
-		} 
-		
-		//exportamos codificado
-		try (FileOutputStream fos = new FileOutputStream(new File("Coches.dat"));
-			 ObjectOutputStream oos = new ObjectOutputStream(fos)) {
-				
-				oos.writeObject(almacen);
-				System.out.println("Archivo codificado en Coches.dat");
-			} catch (IOException e) {
-				
-				e.printStackTrace();
-			} 
-		
+		}
 	}
 	
 	

@@ -56,11 +56,11 @@ public class Main {
 					controlador.list();
 					break;
 				case 5:
-					controlador.exportarAlmacen();
+					controlador.exportarAlmacenTexto();
 					break;
 				case 6:
 					System.out.println("Saliendo de la aplicación....");
-					
+					controlador.exportarAlmacenData();
 					continuar = false;
 					break;
 				default:
