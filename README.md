@@ -52,7 +52,7 @@ public int comprobador(int id) {
 	}
 ```
 
-Toda esta idea es con el fin de evitar, que por ejemplo, tenemos un Array con las ID 0-1-2-3-4. Decidimos borrar la ID 1. El `comprobador(int id)` recorrerá el Array vera que hay el hueco del 1 disponible y se lo asignara. Pero el orden del Array sería el siguiente : 0-2-3-4-1. Si volvemos a llamar al `comprobador(int id)` , verá que después del 0 no viene el 1 y lo volverá a asignar, así que lo tendríamos duplicado.
+Toda esta idea es con el fin de evitar, que por ejemplo, tenemos un Array con las ID 0-1-2-3-4. Decidimos borrar la ID 1. El `comprobador(int id)` recorrerá el Array, verá que hay el hueco del 1 disponible y se lo asignara. Pero el orden del Array sería el siguiente : 0-2-3-4-1. Si volvemos a llamar al `comprobador(int id)` , verá que después del 0 no viene el 1 y lo volverá a asignar, así que lo tendríamos duplicado.
 
 Pasamos a la parte de gestión de archivos. Para la lectura de archivos usaremos las clases `FileInputStream` y `ObjectInputStream`. Leemos el archivo con `readObject()` y se lo asignamos a nuestro `ArrayList<Coche>` . Este método solo lo llamaremos si existe el archivo “Coches.dat” con `file.exists()` .
 
